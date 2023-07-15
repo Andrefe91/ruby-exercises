@@ -35,12 +35,14 @@ end
 # This next exercise might look familiar
 # Use p and puts in order to find what's wrong with our method
 
+
 def isogram?(string)
   original_length = string.length
-  string_array = string.downcase.split
+  string_array = string.downcase.split('')
   unique_length = string_array.uniq.length
   original_length == unique_length
 end
+
 
 # Can you guess what's next?
 # That's right! The final exercise from the lesson, which we'll debug with pry-byebug
@@ -49,8 +51,11 @@ end
 # Next insert plenty of breakpoints, and see if you can tell where things break
 # Once you find the error, fix it and get the test to pass
 
+
 def yell_greeting(string)
   name = string
-  name = name.downcase
+  name = name.upcase
   greeting = "WASSAP, #{name}!"
 end
+
+
